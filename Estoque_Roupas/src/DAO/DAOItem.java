@@ -24,9 +24,9 @@ public class DAOItem implements DaoGenerica<Item> {
 
     @Override
     public void inserir(Item item) {
-        String sql = "INSERT INTO Item (data_entrada, tipo , marca, "
-                + "caracteristica, tamanho, cor, preco_sugerido, quantidade, "
-                + "valor_da_etiqueta, valor_pago, local_compra) VALUES (?,?,?,?,?,?,?,?,?,?,?)";
+        String sql = "insert into Item (data_entrada, tipo, marca,caracteristica, tamanho,\n" +
+"    cor, preco_sugerido, quantidade, local_compra, valor_da_etiqueta, valor_pago, \n" +
+"    valor_para_margem_100 ) VALUES (?,?,?,?,?,?,?,?,?,?,?,?)";
 
         try {
 
@@ -45,6 +45,7 @@ public class DAOItem implements DaoGenerica<Item> {
                 sentenca.setDouble(9, item.getValorEtiqueta());
                 sentenca.setDouble(10, item.getValorPago());
                 sentenca.setString(11, item.getLocalCompra());
+                sentenca.setString(12, "valor_pago * 2");
 
                 sentenca.execute();
                 sentenca.close();
@@ -60,7 +61,7 @@ public class DAOItem implements DaoGenerica<Item> {
     public void alterar(Item item) {
         String sql = "UPDATE Item SET data_entrada = ? , tipo = ? , marca = ?, "
                 + "caracteristica = ?, tamanho = ? , cor = ?, preco_sugerido = ?, quantidade = ?, "
-                + "valor_da_etiqueta = ?, valor_pago = ?, local_compra = ? WHERE id = ?";
+                + " local_compra = ?, valor_da_etiqueta = ?, valor_pago = ?, valor_para_margem_100 = ? WHERE id = ?";
 
         try {
             if (this.conexao.conectar()) {
@@ -74,10 +75,11 @@ public class DAOItem implements DaoGenerica<Item> {
                 sentenca.setString(6,item.getCor());
                 sentenca.setDouble(7, item.getValorSugerido());
                 sentenca.setInt(8, item.getQuantidade());
-                sentenca.setDouble(9, item.getValorEtiqueta());
-                sentenca.setDouble(10, item.getValorPago());
-                sentenca.setString(11, item.getLocalCompra());
-                sentenca.setInt(12, item.id);
+                sentenca.setString(9, item.getLocalCompra());
+                sentenca.setDouble(10, item.getValorEtiqueta());
+                sentenca.setDouble(11, item.getValorPago());
+                sentenca.setString(12, "valor_pago * 2");
+                sentenca.setInt(13, item.id);
 
                 sentenca.execute();
                 sentenca.close();

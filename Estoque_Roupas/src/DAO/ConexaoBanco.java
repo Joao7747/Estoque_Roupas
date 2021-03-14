@@ -16,13 +16,12 @@ public class ConexaoBanco {
         this.servidor = "localhost:3306";
         this.banco = "estoqueroupas";
         this.usuario = "root";
-        this.senha = "";
+        this.senha = "123456";
     }
 
     public boolean conectar() {
         try {
-            this.conexao = DriverManager.getConnection("jdbc:mysql://" + this.servidor +
-                    "/" + this.banco, this.usuario, this.senha);
+            this.conexao = DriverManager.getConnection("jdbc:mysql://" + this.servidor + "/" + this.banco, this.usuario, this.senha);
             return true;
         } catch (SQLException ex) {
             throw new RuntimeException(ex);

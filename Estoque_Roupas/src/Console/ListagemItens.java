@@ -8,7 +8,9 @@ package Console;
 import DAO.ConexaoBanco;
 import DAO.DAOItem;
 import Model.Item;
+import java.util.ArrayList;
 import java.util.List;
+import java.util.Scanner;
 
 /**
  *
@@ -18,23 +20,39 @@ public class ListagemItens extends MaquinaEstadoConsole {
 
     @Override
     public boolean Executa() {
-        boolean sair = false;
         DAOItem i = new DAOItem();
-        ConexaoBanco conex = new ConexaoBanco();
-        if(conex.conectar())
-        {
-        
-            System.out.println("conectado");
-        
-        }
-        List<Item> itens = i.consultar();
+        Scanner scan = new Scanner(System.in);
+        boolean sair = false;
+
+        ArrayList<Item> itens = i.consultar();
 
         if (itens.isEmpty()) {
             System.out.println("Lista esta vazia.");
 
         } else {
-            System.out.println("Uns itens ae.");
+
+            for (Item item : itens) {
+                System.out.println("\nData de entrada: " + item.getDataDeEntrada());
+                System.out.println("Tipo: " + item.getTipo());
+                System.out.println("Marca:" + item.getMarca());
+                System.out.println("Caracteristicas: " + item.getCaracteristica());
+                System.out.println("Tamanho: " + item.getTamanho());
+                System.out.println("Cor: " + item.getCor());
+                System.out.println("Local de Compra:" + item.getLocalCompra());
+                System.out.println("Preço Sugerido: " + item.getValorSugerido());
+                System.out.println("Quantidade deste produto em estoque: " + item.getQuantidade());
+                System.out.println("Valor da etiqueta na compra: " + item.getValorEtiqueta());
+                System.out.println("Valor pago: " + item.getValorPago());
+                System.out.println("Valor para Margem de 100%: " + item.getValorParaMargem() + "\n");
+
+            }
+            System.out.println("digite s para sair\n");
+            if (scan.next().equals("s")) {
+                sair = true;
+            }
+
         }
+
         return sair;
     }
 }
