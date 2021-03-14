@@ -3,19 +3,10 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/C:/Users/jr13f/Downloads/Estoque_Roupas/src/Console/RegistroUsuario.java</file>
-            <file>file:/C:/Users/jr13f/Downloads/Estoque_Roupas/login.txt</file>
-            <file>file:/C:/Users/jr13f/Downloads/Estoque_Roupas/src/Console/EnumEstadoConsole.java</file>
-            <file>file:/C:/Users/jr13f/Downloads/Estoque_Roupas/src/Console/AlterarItem.java</file>
-            <file>file:/C:/Users/jr13f/Downloads/Estoque_Roupas/src/Model/Item.java</file>
-            <file>file:/C:/Users/jr13f/Downloads/Estoque_Roupas/src/DAO/DaoGenerica.java</file>
-            <file>file:/C:/Users/jr13f/Downloads/Estoque_Roupas/src/DAO/DAOItem.java</file>
-            <file>file:/C:/Users/jr13f/Downloads/Estoque_Roupas/src/Console/Login.java</file>
-            <file>file:/C:/Users/jr13f/Downloads/Estoque_Roupas/src/DAO/ConexaoBanco.java</file>
-            <file>file:/C:/Users/jr13f/Downloads/Estoque_Roupas/src/Console/DeletarItem.java</file>
-            <file>file:/C:/Users/jr13f/Downloads/Estoque_Roupas/src/Console/ListagemItens.java</file>
-            <file>file:/C:/Users/jr13f/Downloads/Estoque_Roupas/src/Console/BemVindo.java</file>
-            <file>file:/C:/Users/jr13f/Downloads/Estoque_Roupas/src/Console/CadastroItem.java</file>
+            <file>file:/C:/Users/Caio/Desktop/Estoque_Roupas/src/DAO/ConexaoBanco.java</file>
+            <file>file:/C:/Users/Caio/Desktop/Estoque_Roupas/src/Console/TelaInicial.java</file>
+            <file>file:/C:/Users/Caio/Desktop/Estoque_Roupas/src/Console/Login.java</file>
+            <file>file:/C:/Users/Caio/Desktop/Estoque_Roupas/src/DAO/DAOItem.java</file>
         </group>
     </open-files>
 </project-private>

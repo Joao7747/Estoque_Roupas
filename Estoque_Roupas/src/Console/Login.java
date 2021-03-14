@@ -35,10 +35,12 @@ public class Login extends MaquinaEstadoConsole {
                 System.out.println("Digite sua senha");
                 senha = scan.nextLine();
 
-                while (linha != null || acesso == false) {
+                while (linha != null) {
                     linha = lerArq.readLine();
+                    if(linha == null){
+                        continue;
+                    }
                     vetor = linha.split(";");
-                    
                     if (nome.equals(vetor[0]) && senha.equals(vetor[1])) {
                         acesso = true;
                         estadoConsole = EnumEstadoConsole.MENU_PRINCIPAL.getEstadoMaquina();
